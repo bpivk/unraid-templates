@@ -20,7 +20,7 @@ This image comes pre-bundled with the following services:&#xD;
 - MinIO - our file storage medium.&#xD;
 - Redis - used for caching and improving performance of Budibase services.&#xD;
 - Budibase services - our apps and worker services, as can be found in our Kubernetes and Docker compose installations.</Overview>
-  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <WebUI>http://[IP]:[PORT:10000]</WebUI>
   <Icon>https://res.cloudinary.com/daog6scxm/image/upload/v1632818347/logo/budibase-icon-500_svrfwf.png</Icon>
   <ExtraParams>--restart unless-stopped</ExtraParams>
   <Config Name="Container Port 4" Target="10000" Default="10000" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">10000</Config>
