@@ -17,6 +17,9 @@ With Keila you can easily send out newsletter campaigns and create sign-up forms
 &#xD;
 For smaller newsletters, you can use your own email inbox to send out campaigns. For larger newsletter projects, AWS SES, Sendgrid, Mailgun, and Postmark are supported in addition to SMTP.&#xD;
 &#xD;
+Note:&#xD;
+The password will be displayed in the docker log on first run. You can change it after you log in.&#xD;
+&#xD;
 </Overview>
   <Category>Productivity:</Category>
   <WebUI>http://[IP]:[PORT:4000]</WebUI>
