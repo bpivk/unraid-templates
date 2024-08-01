@@ -32,19 +32,20 @@ The password will be displayed in the docker log on first run. You can change it
   <DonateText/>
   <DonateLink/>
   <Requires/>
-  <Config Name="PostgreSQL database used by Keila" Target="DB_URL" Default="postgres://user:password@host/database" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">postgres://user:password@host/database</Config>
-  <Config Name="Domain of your Keila instance" Target="URL_HOST" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Port" Target="4000" Default="4000" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">4000</Config>
-  <Config Name="Strong secret with at least 64 characters." Target="SECRET_KEY_BASE" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Salt for creating Hashids" Target="HASHID_SALT" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">sha256</Config>
-  <Config Name="User uploads" Target="USER_CONTENT_DIR" Default="" Mode="" Description="Path to a directory where user uploads will be stored. When deploying using containers, this should point to the path of a volume to make sure uploads are persisted." Type="Variable" Display="always" Required="false" Mask="false">./uploads</Config>
-  <Config Name="Hostname of the SMTP server" Target="MAILER_SMTP_HOST" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Port of the SMTP server" Target="MAILER_SMTP_PORT" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">587</Config>
-  <Config Name="Username for the SMTP server" Target="MAILER_SMTP_USER" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Password for the SMTP server" Target="MAILER_SMTP_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Enable SSL/TLS" Target="MAILER_ENABLE_SSL" Default="" Mode="" Description="Enable SSL/TLS by setting to true" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
-  <Config Name="Enable STARTTLS" Target="MAILER_ENABLE_STARTTLS" Default="" Mode="" Description="Enable STARTTLS by setting to true" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
-  <Config Name="Path" Target="/app/uploads" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/keila</Config>
-  <Config Name="Email address for the root user" Target="KEILA_USER" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Disable user registration" Target="DISABLE_REGISTRATION" Default="" Mode="" Description="Disable user registration by setting this variable to true" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="PostgreSQL database used by Keila" Target="DB_URL" Default="postgres://user:password@host/database" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">postgres://user:password@host/database</Config>
+  <Config Name="Domain of your Keila instance" Target="URL_HOST" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Port" Target="443" Default="4000" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">4000</Config>
+  <Config Name="Strong secret with at least 64 characters." Target="SECRET_KEY_BASE" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Salt for creating Hashids" Target="HASHID_SALT" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">sha256</Config>
+  <Config Name="User uploads" Target="USER_CONTENT_DIR" Default="" Mode="" Description="Path to a directory where user uploads will be stored. When deploying using containers, this should point to the path of a volume to make sure uploads are persisted." Type="Variable" Display="always" Required="true" Mask="false">./uploads</Config>
+  <Config Name="Hostname of the SMTP server" Target="MAILER_SMTP_HOST" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Port of the SMTP server" Target="MAILER_SMTP_PORT" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">587</Config>
+  <Config Name="Username for the SMTP server" Target="MAILER_SMTP_USER" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Password for the SMTP server" Target="MAILER_SMTP_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Enable SSL/TLS" Target="MAILER_ENABLE_SSL" Default="" Mode="" Description="Enable SSL/TLS by setting to true" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <Config Name="Enable STARTTLS" Target="MAILER_ENABLE_STARTTLS" Default="" Mode="" Description="Enable STARTTLS by setting to true" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="Path" Target="/app/uploads" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/keila</Config>
+  <Config Name="Email address for the root user" Target="KEILA_USER" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Disable user registration" Target="DISABLE_REGISTRATION" Default="" Mode="" Description="Disable user registration by setting this variable to true" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="Port on which Keila will listen" Target="PORT" Default="443" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">443</Config>
 </Container>
