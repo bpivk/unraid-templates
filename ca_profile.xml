@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Maintainer>
+  <Icon>https://raw.githubusercontent.com/bpivk/unraid-templates/main/images/ca_profile.jpg</Icon>
+  <Profile>
+    I create Unraid docker templates for containers I find interesting and/or useful. 
+  </Profile>
+  <DonateLink>https://www.paypal.com/paypalme/bpivk</DonateLink>
+  <DonateText>If you like my work please consider Donating.</DonateText>
+</Maintainer>
