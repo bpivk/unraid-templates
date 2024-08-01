@@ -22,7 +22,7 @@ The password will be displayed in the docker log on first run. You can change it
 &#xD;
 </Overview>
   <Category>Productivity:</Category>
-  <WebUI>http://[IP]:[PORT:4000]</WebUI>
+  <WebUI>https://[IP]:[PORT:4000]</WebUI>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/pentacent/keila/main/assets/static/favicon.ico</Icon>
   <ExtraParams/>
