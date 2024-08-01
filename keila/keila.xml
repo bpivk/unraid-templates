@@ -26,8 +26,8 @@ For smaller newsletters, you can use your own email inbox to send out campaigns.
   <PostArgs/>
   <CPUset/>
   <DateInstalled>1722503446</DateInstalled>
-  <DonateText>Help support my worky by buying me a beer</DonateText>
-  <DonateLink>https://www.paypal.com/paypalme/bpivk</DonateLink>
+  <DonateText/>
+  <DonateLink/>
   <Requires/>
   <Config Name="PostgreSQL database used by Keila" Target="DB_URL" Default="postgres://user:password@host/database" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">postgres://user:password@host/database</Config>
   <Config Name="Domain of your Keila instance" Target="URL_HOST" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
