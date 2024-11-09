@@ -49,4 +49,3 @@ The password will be displayed in the docker log on first run. You can change it
   <Config Name="Port" Target="4000" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">4000</Config>
   <Config Name="URL scheme of your Keila instance" Target="URL_SCHEMA" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">https</Config>
 </Container>
-</Container>
