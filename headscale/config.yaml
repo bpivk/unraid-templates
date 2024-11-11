@@ -273,12 +273,6 @@ dns:
   nameservers:
     global:
       - 1.1.1.1
-    split:
-      vpn.pivk.net:
-        - 192.168.0.1
-      fw01.slowatch.local:
-        - 10.10.0.1
-
   # Set custom DNS search domains. With MagicDNS enabled,
   # your tailnet base_domain is always the first search domain.
   search_domains: []
@@ -286,10 +280,6 @@ dns:
   # Extra DNS records
   # so far only A-records are supported (on the tailscale side)
   # See https://github.com/juanfont/headscale/blob/main/docs/dns-records.md#Limitations
-  extra_records:
-    - name: vpn.pivk.net
-      type: A
-      value: 85.10.34.198
   #   - name: "grafana.myvpn.example.com"
   #     type: "A"
   #     value: "100.64.0.3"
