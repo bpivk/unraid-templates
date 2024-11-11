@@ -36,12 +36,12 @@ Note:&#xD;
   <ExtraParams>--restart unless-stopped</ExtraParams>
   <PostArgs>serve</PostArgs>
   <CPUset/>
-  <DateInstalled>1731355067</DateInstalled>
+  <DateInstalled>1731355532</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires/>
   <Config Name="Data" Target="/var/lib/headscale" Default="/mnt/user/appdata/headscale/data" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/headscale/data</Config>
   <Config Name="Config" Target="/etc/headscale" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/headscale/config</Config>
-  <Config Name="Port" Target="8085" Default="8085" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8085</Config>
-  <Config Name="Metrics" Target="9090" Default="9090" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">9090</Config>
+  <Config Name="Connecting Port" Target="8085" Default="8085" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8085</Config>
+  <Config Name="Metrics" Target="9090" Default="9090" Mode="tcp" Description="DON'T OPEN IN FIREWALL" Type="Port" Display="always" Required="false" Mask="false">9090</Config>
 </Container>
