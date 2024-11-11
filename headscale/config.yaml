@@ -10,7 +10,7 @@
 #
 # https://myheadscale.example.com:443
 #
-server_url: http://127.0.0.1:8085
+server_url: https://vpn.example.net
 
 # Address to listen to / bind to on the server
 #
@@ -167,7 +167,6 @@ database:
     # Enable WAL mode for SQLite. This is recommended for production environments.
     # https://www.sqlite.org/wal.html
     write_ahead_log: true
-
   # # Postgres config
   # Please note that using Postgres is highly discouraged as it is only supported for legacy reasons.
   # See database.type for more information.
@@ -186,14 +185,14 @@ database:
   #   # in the 'ssl' field. Refers to https://www.postgresql.org/docs/current/libpq-ssl.html Table 34.1.
   #   ssl: false
 
-### TLS configuration
-#
-## Let's encrypt / ACME
-#
-# headscale supports automatically requesting and setting up
-# TLS for a domain with Let's Encrypt.
-#
-# URL to ACME directory
+  ### TLS configuration
+  #
+  ## Let's encrypt / ACME
+  #
+  # headscale supports automatically requesting and setting up
+  # TLS for a domain with Let's Encrypt.
+  #
+  # URL to ACME directory
 acme_url: https://acme-v02.api.letsencrypt.org/directory
 
 # Email to register with ACME provider
@@ -209,7 +208,7 @@ tls_letsencrypt_cache_dir: /var/lib/headscale/cache
 
 # Type of ACME challenge to use, currently supported types:
 # HTTP-01 or TLS-ALPN-01
-# See: docs/ref/tls.md for more information
+# See [docs/tls.md](docs/tls.md) for more information
 tls_letsencrypt_challenge_type: HTTP-01
 # When HTTP-01 challenge is chosen, letsencrypt must set up a
 # verification endpoint, and it will be listening on:
@@ -260,6 +259,7 @@ policy:
 # all the fields under `dns` should be set to empty values.
 dns:
   # Whether to use [MagicDNS](https://tailscale.com/kb/1081/magicdns/).
+  # Only works if there is at least a nameserver defined.
   magic_dns: true
 
   # Defines the base domain to create the hostnames for MagicDNS.
@@ -267,29 +267,17 @@ dns:
   # `base_domain` must be a FQDN, without the trailing dot.
   # The FQDN of the hosts will be
   # `hostname.base_domain` (e.g., _myhost.example.com_).
-  base_domain: example.com
+  base_domain: dns.example.net
 
   # List of DNS servers to expose to clients.
   nameservers:
     global:
       - 1.1.1.1
-      - 1.0.0.1
-      - 2606:4700:4700::1111
-      - 2606:4700:4700::1001
-
-      # NextDNS (see https://tailscale.com/kb/1218/nextdns/).
-      # "abc123" is example NextDNS ID, replace with yours.
-      # - https://dns.nextdns.io/abc123
-
-    # Split DNS (see https://tailscale.com/kb/1054/dns/),
-    # a map of domains and which DNS server to use for each.
     split:
-      {}
-      # foo.bar.com:
-      #   - 1.1.1.1
-      # darp.headscale.net:
-      #   - 1.1.1.1
-      #   - 8.8.8.8
+      vpn.pivk.net:
+        - 192.168.0.1
+      fw01.slowatch.local:
+        - 10.10.0.1
 
   # Set custom DNS search domains. With MagicDNS enabled,
   # your tailnet base_domain is always the first search domain.
@@ -297,8 +285,11 @@ dns:
 
   # Extra DNS records
   # so far only A-records are supported (on the tailscale side)
-  # See: docs/ref/dns.md
-  extra_records: []
+  # See https://github.com/juanfont/headscale/blob/main/docs/dns-records.md#Limitations
+  extra_records:
+    - name: vpn.pivk.net
+      type: A
+      value: 85.10.34.198
   #   - name: "grafana.myvpn.example.com"
   #     type: "A"
   #     value: "100.64.0.3"
