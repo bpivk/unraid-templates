@@ -24,7 +24,7 @@ The password will be displayed in the docker log on first run. You can change it
   <Category>Productivity:</Category>
   <WebUI>https://[IP]:[PORT:4000]</WebUI>
   <TemplateURL/>
-  <Icon>https://raw.githubusercontent.com/pentacent/keila/main/assets/static/favicon.ico</Icon>
+  <Icon>https://raw.githubusercontent.com/bpivk/unraid-templates/refs/heads/main/images/ca_keila.ico</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
