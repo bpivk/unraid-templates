@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/jtclus/headscale/</Support>
+  <Support>https://forums.unraid.net/topic/179313-support-headscale-an-open-source-self-hosted-implementation-of-the-tailscale-control-server/</Support>
   <Project>https://github.com/juanfont/headscale</Project>
   <Overview>Headscale aims to implement a self-hosted, open source alternative to the Tailscale control server. &#xD;
 &#xD;
