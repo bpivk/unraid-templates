@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>headscale</Name>
+  <Repository>headscale/headscale:0.23.0</Repository>
+  <Registry>https://hub.docker.com/r/jtclus/headscale/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/jtclus/headscale/</Support>
+  <Project>https://github.com/juanfont/headscale</Project>
+  <Overview>Headscale aims to implement a self-hosted, open source alternative to the Tailscale control server. &#xD;
+&#xD;
+Headscale's goal is to provide self-hosters and hobbyists with an open-source server they can use for their projects and labs. It implements a narrow scope, a single Tailnet, suitable for a personal use, or a small open-source organisation.&#xD;
+&#xD;
+Installation:&#xD;
+ Set up this docker&#xD;
+ Download config.yaml file from: https://raw.githubusercontent.com/bpivk/unraid-templates/refs/heads/main/headscale/config.yaml and copy the file to /mnt/user/appdata/headscale/config&#xD;
+&#xD;
+Edit:&#xD;
+server_url = Your vpn address or IP address&#xD;
+listen_addr (if changed from default)&#xD;
+base_domain = Your domain</Overview>
+  <Category>Network:VPN</Category>
+  <WebUI>http://[IP]:[PORT:8085]/windows</WebUI>
+  <TemplateURL/>
+  <Icon>https://github.com/bpivk/unraid-templates/blob/main/images/ca_headscale.png?raw=true</Icon>
+  <ExtraParams/>
+  <PostArgs>serve</PostArgs>
+  <CPUset/>
+  <DateInstalled>1731332337</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Data" Target="/var/lib/headscale" Default="/mnt/user/appdata/headscale/data" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/headscale/data</Config>
+  <Config Name="Config" Target="/etc/headscale" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/headscale/config</Config>
+  <Config Name="Port" Target="8085" Default="8085" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8085</Config>
+  <Config Name="Metrics" Target="9090" Default="9090" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">9090</Config>
+</Container>
