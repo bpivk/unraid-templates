@@ -48,4 +48,5 @@ The password will be displayed in the docker log on first run. You can change it
   <Config Name="Disable user registration" Target="DISABLE_REGISTRATION" Default="" Mode="" Description="Disable user registration by setting this variable to true" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
   <Config Name="Port" Target="4000" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">4000</Config>
   <Config Name="URL scheme of your Keila instance" Target="URL_SCHEMA" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">https</Config>
+  <Config Name="FROM email address" Target="MAILER_SMTP_FROM_EMAIL" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">something@something.com</Config>
 </Container>
