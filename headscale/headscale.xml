@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>headscale</Name>
-  <Repository>headscale/headscale:latest-debug</Repository>
+  <Repository>headscale/headscale:v0.25.1-debug</Repository>
   <Registry>https://hub.docker.com/r/jtclus/headscale/</Registry>
   <Network>bridge</Network>
   <MyIP/>
