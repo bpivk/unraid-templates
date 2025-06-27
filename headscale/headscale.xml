@@ -48,5 +48,4 @@ Note:&#xD;
   <Config Name="Config" Target="/etc/headscale" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/headscale/config</Config>
   <Config Name="Connecting Port" Target="8085" Default="8085" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">8085</Config>
   <Config Name="Metrics" Target="9090" Default="9090" Mode="tcp" Description="DON'T OPEN IN FIREWALL" Type="Port" Display="always" Required="false" Mask="false">9090</Config>
-  <TailscaleStateDir/>
 </Container>
